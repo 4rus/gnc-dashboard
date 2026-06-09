@@ -136,7 +136,7 @@ export function useDashboardState() {
     };
     setDeliverables((prev) => [...prev, newDel]);
     setDeliverableIdCounter((prev) => prev + 1);
-    // Auto-update lastUpdated on the claim
+ 
     setClaims((prev) =>
       prev.map((c) =>
         c.id === claimId ? { ...c, lastUpdated: getTimestamp() } : c
@@ -153,7 +153,7 @@ export function useDashboardState() {
     setDeliverables((prev) =>
       prev.map((d) => (d.id === id ? { ...d, [field]: value } : d))
     );
-    // Auto-update lastUpdated on the parent claim
+    
     const del = deliverables.find(d => d.id === id);
     if (del) {
       setClaims((prev) =>
