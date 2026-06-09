@@ -35,7 +35,17 @@ export default function Header({ currentRole, currentUserId, team, onRoleChange 
     <div className="header">
       <div className="header-left">
         <div className="logo">
-        <img src="/image/gnc-logo.png" alt="GNC Group" style={{ height: 32, width: 'auto', objectFit: 'contain' }} />
+        <img 
+  src="/image/gnc-logo.png" 
+  alt="GNC Group" 
+  style={{ 
+    height: 36, 
+    width: 'auto', 
+    objectFit: 'contain',
+    imageRendering: 'auto',
+    filter: 'brightness(1.1) contrast(1.1) drop-shadow(0 0 1px rgba(255,255,255,0.15))'
+  }} 
+/>
         </div>
         <div className="header-divider"></div>
         <span className="header-title">Management Dashboard</span>
